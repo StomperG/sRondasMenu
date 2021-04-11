@@ -1,0 +1,105 @@
+"Phrases"
+{
+    "rondas_title"
+    {
+        "#format"       "{1:s}"
+        "en"			"≡ Round Menu\n★ Welcome {1}"
+        "pt"			"≡ Menu de Rondas\n★ Bem-vindo {1}"
+    }
+
+    "ronda_1"
+    {
+        "en"			"⮞ Deagle round"
+        "pt"			"⮞ Ronda de deagle"
+    }
+
+    "ronda_2"
+    {
+        "en"			"⮞ AK-47 round"
+        "pt"			"⮞ Ronda de AK-47"
+    }
+    
+    "ronda_3"
+    {
+        "en"			"⮞ Scout round (Wo/ gravity)"
+        "pt"			"⮞ Ronda de Scout (S/ gravidade)"
+    }
+    
+    "ronda_4"
+    {
+        "en"			"⮞ Scout round (W/ gravity)"
+        "pt"			"⮞ Ronda de Scout (C/ gravidade)"
+    }
+    
+    "ronda_5"
+    {
+        "en"			"⮞ Noscope round (Wo/ speed)"
+        "pt"			"⮞ Ronda de Noscope (S/ velocidade)"
+    }
+    
+    "ronda_6"
+    {
+        "en"			"⮞ Noscope round (W/ speed)"
+        "pt"			"⮞ Ronda de Noscope (C/ velocidade)"
+    }
+    
+    "ronda_7"
+    {
+        "en"			"⮞ Knife round (Wo/ speed)"
+        "pt"			"⮞ Ronda de faca (Sem/ velocidade)"
+    }
+    
+    "ronda_8"
+    {
+        "en"			"⮞ Knife round (W/ speed)"
+        "pt"			"⮞ Ronda de faca (C/ velocidade)"
+    }
+    
+    "deagle_round"
+    {
+        "en"			"{default}[ {green}TAC {default}] {red}DEAGLE {default}round{default}!"
+        "pt"			"{default}[ {green}TAC {default}] {default}RONDA DE {red}DEAGLE{default}!"
+    }
+
+    "ak47_round"
+    {
+        "en"			"{default}[ {green}TAC {default}] {red}AK-47 {default}round{default}!"
+        "pt"			"{default}[ {green}TAC {default}] {default}RONDA DE {red}AK47{default}!"
+    }
+
+    "scout_wogravity"
+    {
+        "en"			"{default}[ {green}TAC {default}] {red}SCOUT {default}round{default} without gravity!"
+        "pt"			"{default}[ {green}TAC {default}] {default}RONDA DE {red}SCOUT{default} sem gravidade!"
+    }
+
+    "scout_wgravity"
+    {
+        "en"			"{default}[ {green}TAC {default}] {red}SCOUT {default}round{default} with speed!"
+        "pt"			"{default}[ {green}TAC {default}] {default}RONDA DE {red}SCOUT{default} com gravidade!"
+    }
+    
+    "noscope_wospeed"
+    {
+        "en"			"{default}[ {green}TAC {default}] {red}NOSCOPE {default}round{default} without speed!"
+        "pt"			"{default}[ {green}TAC {default}] {default}RONDA DE {red}NOSCOPE{default} sem speed!"
+    }
+    
+    "noscope_speed"
+    {
+        "en"			"{default}[ {green}TAC {default}] {red}NOSCOPE {default}round{default} with speed!"
+        "pt"			"{default}[ {green}TAC {default}] {default}RONDA DE {red}NOSCOPE{default} com speed!"
+    }
+    
+    "knife_nospeed"
+    {
+        "en"			"{default}[ {green}TAC {default}] {red}AK-47 {default}round{default} without speed!"
+        "pt"			"{default}[ {green}TAC {default}] {default}RONDA DE {red}AK47{default} sem velocidade!"
+    }
+    
+    "knife_speed"
+    {
+        "en"			"{default}[ {green}TAC {default}] {red}KNIFE {default}round{default} with speed!"
+        "pt"			"{default}[ {green}TAC {default}] {default}RONDA DE {red}FACA{default} com velocidade!"
+    }
+}
