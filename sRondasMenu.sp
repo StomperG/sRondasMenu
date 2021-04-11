@@ -24,13 +24,19 @@ public Plugin myinfo =
 
 public void OnPluginStart()
 {
+	// Variables
 	Ronda_Inicio = false;
 	
-	RegAdminCmd("sm_rondas", Comando_rondas, ADMFLAG_BAN); //Portuguese Command
-	RegAdminCmd("sm_rounds", Comando_rondas, ADMFLAG_BAN); //English Command
+	// Commands
+	RegAdminCmd("sm_rounds", Comando_rondas, ADMFLAG_BAN);
+	RegAdminCmd("sm_rondas", Comando_rondas, ADMFLAG_BAN); // English translation
 	
+	// Events
 	HookEvent("round_start", Inicio_Ronda);
 	HookEvent("round_end", Fim_Ronda);
+	
+	// Translations
+	LoadTranslations("sRondasMenu.phrases");
 }
 
 public Action Inicio_Ronda(Event event, const char[] name, bool dontBroadcast)
@@ -69,8 +75,8 @@ public Action Inicio_Ronda(Event event, const char[] name, bool dontBroadcast)
 
 public Action Fim_Ronda(Event event, const char[] name, bool dontBroadcast)
 {
-	if(ronda_started) {
-		Ronda_Inicio = false;	
+	if (ronda_started) {
+		Ronda_Inicio = false;
 		ronda_started = false;
 		ronda_tipo = 0;
 	}
@@ -79,17 +85,30 @@ public Action Fim_Ronda(Event event, const char[] name, bool dontBroadcast)
 public Action Comando_rondas(int client, int args)
 {
 	Menu rondas = new Menu(MenuHandler_Rondas);
+	char traducao[256];
 	
-	rondas.SetTitle("Escolhe uma ronda!\n¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
+	char jogador[64];
+	GetClientName(client, jogador, sizeof(jogador));
 	
-	rondas.AddItem("1", "Ronda de Deagle"); // Deagle Round
-	rondas.AddItem("2", "Ronda de AK47"); //AK47 Round
-	rondas.AddItem("3", "Ronda de Scout S/Gravidade"); //Scout Round without Gravity
-	rondas.AddItem("4", "Ronda de Scout C/Gravidade"); //Scout Round with Gravity
-	rondas.AddItem("5", "Ronda Noscope S/Velocidade"); //Noscope round without velocity
-	rondas.AddItem("6", "Ronda Noscope C/Velocidade"); //Noscope round with Velocity
-	rondas.AddItem("7", "Ronda de Faca S/Velocidade"); //Knife round without velocity
-	rondas.AddItem("8", "Ronda de Faca C/Velocidade"); //Knife round with velocity
+	Format(traducao, sizeof(traducao), "%t", "rondas_title", jogador);
+	rondas.SetTitle(traducao);
+	
+	Format(traducao, sizeof(traducao), "%t", "ronda_1");
+	rondas.AddItem("1", traducao); // Deagle Round
+	Format(traducao, sizeof(traducao), "%t", "ronda_2");
+	rondas.AddItem("2", traducao); //AK47 Round
+	Format(traducao, sizeof(traducao), "%t", "ronda_3");
+	rondas.AddItem("3", traducao); //Scout Round without Gravity
+	Format(traducao, sizeof(traducao), "%t", "ronda_4");
+	rondas.AddItem("4", traducao); //Scout Round with Gravity
+	Format(traducao, sizeof(traducao), "%t", "ronda_5");
+	rondas.AddItem("5", traducao); //Noscope round without velocity
+	Format(traducao, sizeof(traducao), "%t", "ronda_6");
+	rondas.AddItem("6", traducao); //Noscope round with Velocity
+	Format(traducao, sizeof(traducao), "%t", "ronda_7");
+	rondas.AddItem("7", traducao); //Knife round without velocity
+	Format(traducao, sizeof(traducao), "%t", "ronda_8");
+	rondas.AddItem("8", traducao); //Knife round with velocity
 	
 	rondas.ExitButton = true;
 	rondas.Display(client, 30);
@@ -163,51 +182,62 @@ public int MenuHandler_Rondas(Menu rondas, MenuAction action, int client, int po
 
 public Action Timer_Opcao1(Handle timer, int i)
 {
+	char traducao[256];
+	Format(traducao, sizeof(traducao), "%t", "deagle_round");
+	
 	EMP_GiveWeapon(i, "weapon_deagle");
 	EMP_GiveWeapon(i, "weapon_knife");
 	EMP_SetClientKevlar(i, 100);
-	CPrintToChatAll("{default}[ {green}TAC {default}] {default}RONDA DE {red}DEAGLE{default}!");
+	CPrintToChatAll(traducao);
 	
 	return Plugin_Stop;
 }
 
 public Action Timer_Opcao2(Handle timer, int i)
 {
+	char traducao[256];
+	Format(traducao, sizeof(traducao), "%t", "ak47_round");
 	EMP_GiveWeapon(i, "weapon_ak47");
 	EMP_GiveWeapon(i, "weapon_knife");
 	EMP_SetClientKevlar(i, 100);
-	CPrintToChatAll("{default}[ {green}TAC {default}] {default}RONDA DE {red}AK47{default}!");
+	CPrintToChatAll(traducao);
 	
 	return Plugin_Stop;
 }
 
 public Action Timer_Opcao3(Handle timer, int i)
 {
+	char traducao[256];
+	Format(traducao, sizeof(traducao), "%t", "scout_wogravity");
 	EMP_GiveWeapon(i, "weapon_ssg08");
 	EMP_GiveWeapon(i, "weapon_knife");
 	EMP_SetClientKevlar(i, 100);
-	CPrintToChatAll("{default}[ {green}TAC {default}] {default}RONDA DE {red}SCOUT SEM GRAVIDADE{default}!");
+	CPrintToChatAll(traducao);
 	
 	return Plugin_Stop;
 }
 
 public Action Timer_Opcao4(Handle timer, int i)
 {
+	char traducao[256];
+	Format(traducao, sizeof(traducao), "%t", "scout_wgravity");
 	EMP_GiveWeapon(i, "weapon_ssg08");
 	EMP_GiveWeapon(i, "weapon_knife");
 	EMP_SetClientKevlar(i, 100);
 	SetEntityGravity(i, 2.5);
-	CPrintToChatAll("{default}[ {green}TAC {default}] {default}RONDA DE {red}SCOUT COM GRAVIDADE{default}!");
+	CPrintToChatAll(traducao);
 	
 	return Plugin_Stop;
 }
 
 public Action Timer_Opcao5(Handle timer, int i)
 {
+	char traducao[256];
+	Format(traducao, sizeof(traducao), "%t", "noscope_wospeed");
 	EMP_GiveWeapon(i, "weapon_awp");
 	EMP_GiveWeapon(i, "weapon_knife");
 	EMP_SetClientKevlar(i, 100);
-	CPrintToChatAll("{default}[ {green}TAC {default}] {default}RONDA {red}NOSCOPE{default}!");
+	CPrintToChatAll(traducao);
 	ServerCommand("sm_noscope");
 	
 	return Plugin_Stop;
@@ -215,11 +245,13 @@ public Action Timer_Opcao5(Handle timer, int i)
 
 public Action Timer_Opcao6(Handle timer, int i)
 {
+	char traducao[256];
+	Format(traducao, sizeof(traducao), "%t", "noscope_speed");
 	EMP_GiveWeapon(i, "weapon_awp");
 	EMP_GiveWeapon(i, "weapon_knife");
 	EMP_SetClientKevlar(i, 100);
 	SetEntPropFloat(i, Prop_Data, "m_flLaggedMovementValue", 2.5);
-	CPrintToChatAll("{default}[ {green}TAC {default}] {default}RONDA {red}NOSCOPE COM VELOCIDADE{default}!");
+	CPrintToChatAll(traducao);
 	ServerCommand("sm_noscope");
 	
 	return Plugin_Stop;
@@ -227,19 +259,23 @@ public Action Timer_Opcao6(Handle timer, int i)
 
 public Action Timer_Opcao7(Handle timer, int i)
 {
+	char traducao[256];
+	Format(traducao, sizeof(traducao), "%t", "knife_nospeed");
 	EMP_GiveWeapon(i, "weapon_knife");
 	EMP_SetClientKevlar(i, 100);
-	CPrintToChatAll("{default}[ {green}TAC {default}] {default}RONDA DE {red}FACA SEM VELOCIDADE{default}!");
+	CPrintToChatAll(traducao);
 	
 	return Plugin_Stop;
 }
 
 public Action Timer_Opcao8(Handle timer, int i)
 {
+	char traducao[256];
+	Format(traducao, sizeof(traducao), "%t", "knife_speed");
 	EMP_GiveWeapon(i, "weapon_knife");
 	EMP_SetClientKevlar(i, 100);
 	SetEntPropFloat(i, Prop_Data, "m_flLaggedMovementValue", 2.5);
-	CPrintToChatAll("{default}[ {green}TAC {default}] {default}RONDA DE {red}FACA COM VELOCIDADE{default}!");
+	CPrintToChatAll(traducao);
 	
 	return Plugin_Stop;
 } 
