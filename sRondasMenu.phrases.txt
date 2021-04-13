@@ -4,102 +4,119 @@
     {
         "#format"       "{1:s}"
         "en"			"≡ Round Menu\n★ Welcome {1}"
+        "hu"			"≡ Kör Menü\n★ Üdvözöllek {1}"
         "pt"			"≡ Menu de Rondas\n★ Bem-vindo {1}"
     }
 
     "ronda_1"
     {
         "en"			"⮞ Deagle round"
+        "hu"			"⮞ Deagle kör"
         "pt"			"⮞ Ronda de deagle"
     }
 
     "ronda_2"
     {
         "en"			"⮞ AK-47 round"
+        "hu"			"⮞ AK-47 kör"
         "pt"			"⮞ Ronda de AK-47"
     }
     
     "ronda_3"
     {
         "en"			"⮞ Scout round (Wo/ gravity)"
+        "hu"			"⮞ Scout kör (Normál Gravitáció)"
         "pt"			"⮞ Ronda de Scout (S/ gravidade)"
     }
     
     "ronda_4"
     {
         "en"			"⮞ Scout round (W/ gravity)"
+        "hu"			"⮞ Scout kör (Alacsony Gravitáció)"
         "pt"			"⮞ Ronda de Scout (C/ gravidade)"
     }
     
     "ronda_5"
     {
         "en"			"⮞ Noscope round (Wo/ speed)"
+        "hu"			"⮞ Noscope kör (Normál Sebesség)"
         "pt"			"⮞ Ronda de Noscope (S/ velocidade)"
     }
     
     "ronda_6"
     {
         "en"			"⮞ Noscope round (W/ speed)"
+        "hu"			"⮞ Noscope kör (Nagy Sebesség)"
         "pt"			"⮞ Ronda de Noscope (C/ velocidade)"
     }
     
     "ronda_7"
     {
         "en"			"⮞ Knife round (Wo/ speed)"
+        "hu"			"⮞ Kés kör (Normál Sebesség)"
         "pt"			"⮞ Ronda de faca (Sem/ velocidade)"
     }
     
     "ronda_8"
     {
         "en"			"⮞ Knife round (W/ speed)"
+        "hu"			"⮞ Kés kör (Nagy Sebesség)"
         "pt"			"⮞ Ronda de faca (C/ velocidade)"
     }
     
     "deagle_round"
     {
         "en"			"{default}[ {green}TAC {default}] {red}DEAGLE {default}round{default}!"
+        "hu"			"{default}[ {green}TAC {default}] {red}DEAGLE {default}kör{default}!"
         "pt"			"{default}[ {green}TAC {default}] {default}RONDA DE {red}DEAGLE{default}!"
     }
 
     "ak47_round"
     {
         "en"			"{default}[ {green}TAC {default}] {red}AK-47 {default}round{default}!"
+        "hu"			"{default}[ {green}TAC {default}] {red}AK-47 {default}kör{default}!"
         "pt"			"{default}[ {green}TAC {default}] {default}RONDA DE {red}AK47{default}!"
     }
 
     "scout_wogravity"
     {
         "en"			"{default}[ {green}TAC {default}] {red}SCOUT {default}round{default} without gravity!"
+        "hu"			"{default}[ {green}TAC {default}] {red}SCOUT {default}kör{default} normális gravitációval!"
         "pt"			"{default}[ {green}TAC {default}] {default}RONDA DE {red}SCOUT{default} sem gravidade!"
     }
 
     "scout_wgravity"
     {
-        "en"			"{default}[ {green}TAC {default}] {red}SCOUT {default}round{default} with speed!"
+        "en"			"{default}[ {green}TAC {default}] {red}SCOUT {default}round{default} with gravity!"
+        "hu"			"{default}[ {green}TAC {default}] {red}SCOUT {default}kör{default} nagy gravitációval!"
         "pt"			"{default}[ {green}TAC {default}] {default}RONDA DE {red}SCOUT{default} com gravidade!"
     }
     
     "noscope_wospeed"
     {
         "en"			"{default}[ {green}TAC {default}] {red}NOSCOPE {default}round{default} without speed!"
-        "pt"			"{default}[ {green}TAC {default}] {default}RONDA DE {red}NOSCOPE{default} sem speed!"
+        "hu"			"{default}[ {green}TAC {default}] {red}NOSCOPE {default}kör{default} normális sebességgel!"
+        "pt"			"{default}[ {green}TAC {default}] {default}RONDA DE {red}NOSCOPE{default} sem velocidade!"
     }
     
     "noscope_speed"
     {
         "en"			"{default}[ {green}TAC {default}] {red}NOSCOPE {default}round{default} with speed!"
-        "pt"			"{default}[ {green}TAC {default}] {default}RONDA DE {red}NOSCOPE{default} com speed!"
+        "hu"			"{default}[ {green}TAC {default}] {red}NOSCOPE {default}kör{default} nagy sebességgel!"
+        "pt"			"{default}[ {green}TAC {default}] {default}RONDA DE {red}NOSCOPE{default} com velocidade!"
     }
     
     "knife_nospeed"
     {
         "en"			"{default}[ {green}TAC {default}] {red}AK-47 {default}round{default} without speed!"
+        "hu"			"{default}[ {green}TAC {default}] {red}AK-47 {default}kör{default} normális sebességgel!"
         "pt"			"{default}[ {green}TAC {default}] {default}RONDA DE {red}AK47{default} sem velocidade!"
     }
     
     "knife_speed"
     {
         "en"			"{default}[ {green}TAC {default}] {red}KNIFE {default}round{default} with speed!"
+        "hu"			"{default}[ {green}TAC {default}] {red}KNIFE {default}kör{default} nagy sebességgel!"
         "pt"			"{default}[ {green}TAC {default}] {default}RONDA DE {red}FACA{default} com velocidade!"
     }
 }
